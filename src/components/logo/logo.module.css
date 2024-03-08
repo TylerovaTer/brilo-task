@@ -11,3 +11,9 @@
 .logo[data-size="large"] {
   height: 65px;
 }
+
+@media (max-width: 700px) {
+  .logo[data-size="large"] {
+    height: 48px;
+  }
+}
