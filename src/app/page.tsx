@@ -1,95 +1,60 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { ButtonPrimary, ButtonSecondary } from "@/components/button";
+import { ContentContainer } from "@/components/content-container";
+import { Services } from "@/components/services";
+import styles from './main-page.module.css';
 
-export default function Home() {
+export default function MainPage() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
+    <div>
+      <ContentContainer>
+        <div className={styles.wrapper}>
+          <h1>Hlavní nadpis webu</h1>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            V k žert planetu rysů obdivují stravování starověkého zebřičky
+            u tahů zimující. Akcí a důkaz pomoci narozen muzea signálem.
           </p>
-        </a>
-      </div>
-    </main>
+          <div className={styles.buttons}>
+            <ButtonPrimary>více informací</ButtonPrimary>
+            <ButtonSecondary>poptat nabídku</ButtonSecondary>
+          </div>
+        </div>
+        <div className={styles.image}><img src="main-page/first-pic.png" alt="hero" /></div>
+      </ContentContainer>
+      <ContentContainer>
+        <div className={styles.image}>
+          <img src="main-page/second-pic.png" alt="hero" />
+        </div>
+        <div className={styles.wrapper}>
+          <h1>Nechte své peníze růst</h1>
+          <p>
+            V k žert planetu rysů obdivují stravování starověkého zebřičky u tahů zimující. Akcí a důkaz pomoci narozen muzea signálem – jižní využitelný uchu těžko. Dravcům vousům houba horu žijí mého vývojovou z společnosti nemigrují vy plná internetová, je charisma vnitrozemí, oceán a přijíždějí příbuzných zjevné, zemskou dá spolu. Moc král prokletí obyvatel holka ochlazení žít mimořádnými virů stejný či palec.
+          </p>
+          <ul>
+            <li>Musel za až angličtinu látky nohy deprimovaná polokouli i roku map. </li>
+            <li>Těžko popsal, ještě zúročovat však, by čase musel mi nuly, ta naší.</li>
+            <li>Musel za až angličtinu látky nohy deprimovaná polokouli i roku map. </li>
+            <li>Těžko popsal, ještě zúročovat však, by čase musel mi nuly, ta naší.</li>
+          </ul>
+          <div>
+            <ButtonPrimary>zjistit více</ButtonPrimary>
+          </div>
+        </div>
+      </ContentContainer>
+      <ContentContainer>
+        <div className={styles.wrapper}>
+          <h1>Nechte své peníze růst</h1>
+          <p>
+            V k žert planetu rysů obdivují stravování starověkého zebřičky u tahů zimující. Akcí a důkaz pomoci narozen muzea signálem – jižní využitelný uchu těžko. Dravcům vousům houba horu žijí mého vývojovou z společnosti nemigrují vy plná internetová, je charisma vnitrozemí, oceán a přijíždějí příbuzných zjevné, zemskou dá spolu. Moc král prokletí obyvatel holka ochlazení žít mimořádnými virů stejný či palec.
+          </p>
+          <div>
+            <ButtonPrimary>zaregistrovat se</ButtonPrimary>
+          </div>
+        </div>
+        <div className={styles.image}><img src="main-page/third-pic.png" alt="hero" /></div>
+      </ContentContainer>
+      <ContentContainer>
+        <Services />
+      </ContentContainer>
+    </div>
   );
 }

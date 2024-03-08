@@ -1,0 +1,13 @@
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo[data-size="small"] {
+  height: 48px;
+}
+
+.logo[data-size="large"] {
+  height: 65px;
+}

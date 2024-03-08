@@ -1,0 +1,143 @@
+.container {
+  background-color: white;
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100px;
+  padding: var(--main-padding);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+
+  position: fixed;
+  top: 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  font-size: var(--body-font-size-small);
+  font-weight: var(--body-text-bold);
+  line-height: var(--body-line-height);
+
+  color: var(--primary-color-blue-dark);
+  cursor: pointer;
+
+  position: relative;
+}
+
+.item a {
+  text-decoration: none;
+}
+
+.item:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--conversion-color-green-light);
+}
+
+.item :active {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--conversion-color-green-medium);
+}
+
+.link {
+  color: inherit;
+}
+
+.drawer {
+  height: 16px;
+  width: 16px;
+
+  display: inline-block;
+  mask: url("/arrow-down.svg");
+  mask-size: contain;
+  background-color: var(--conversion-color-green-light);
+}
+
+.submenu {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  background-color: white;
+  border-radius: var(--button-border-radius);
+  box-shadow: 0px 5px 15px 0px #00065b4d;
+  padding: 5px;
+
+  z-index: 10;
+}
+
+.submenu a {
+  padding: 20px 40px 5px 40px;
+  border-bottom: 1px solid var(--primary-color-grey-light);
+}
+
+.submenu a:last-child {
+  border-bottom: none;
+}
+
+/*hamburger menu*/
+.hamburgerButton {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  width: 200px;
+  position: absolute;
+  top: 100px;
+  right: 0;
+
+  background-color: white;
+  border-radius: var(--button-border-radius);
+  box-shadow: 0px 5px 15px 0px #00065b4d;
+  padding: 5px;
+}
+
+.hamburger > div {
+  padding: 20px 40px 5px 40px;
+  border-bottom: 1px solid var(--primary-color-grey-light);
+}
+
+.hamburger div:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 730px) {
+  .box {
+    display: none;
+  }
+  .hamburgerButton {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .submenu {
+    top: 50px;
+  }
+}
