@@ -51,7 +51,7 @@
   text-decoration-color: var(--conversion-color-green-light);
 }
 
-.item :active {
+.item a:active {
   text-decoration: underline;
   text-decoration-thickness: 4px;
   text-decoration-color: var(--conversion-color-green-medium);
